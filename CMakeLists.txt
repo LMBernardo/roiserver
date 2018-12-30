@@ -21,3 +21,5 @@ add_executable(roiserver
         lib/server_socket_handler/utilities.cpp
         lib/server_socket_handler/utilities.h
         roiserver.cpp)
+
+target_link_libraries(roiserver wiringPi)
