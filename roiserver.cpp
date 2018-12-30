@@ -28,7 +28,9 @@
 #include <time.h>
 
 // wiringPi GPIO library
-#include <wiringPi.h>
+#ifndef _ROISERVER_TEST_MODE_
+  #include <wiringPi.h>
+#endif
 
 // Socket library
 #include "lib/server_socket_handler/server_socket_handler.h"
@@ -120,7 +122,7 @@ int process_cmd(roomba_core* s_roomba_p, std::vector<std::string> split_data){
                 return 0;
         }
 
-        if (split_data[data_offset] == "motors"){
+        if (split_data[data_offset] == "motors") {
                 s_roomba_p->motors( split_data[data_offset+1] );
                 return 0;
         }
@@ -190,10 +192,10 @@ int main( int argc, char* argv[] ){
         if ( init_status != 0 ) {
                 err_quit(init_status);
         }
-	#endif
+  #endif
 
         // Connect to Roomba over GPIO UART
-	#ifndef _ROISERVER_TEST_MODE_
+  #ifndef _ROISERVER_TEST_MODE_
         int roomba_s_status = s_roomba.connect();
         if ( roomba_s_status != 0 ) {
                 err_quit(roomba_s_status);
