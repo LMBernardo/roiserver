@@ -31,10 +31,10 @@
 #include <wiringPi.h>
 
 // Socket library
-#include "lib/server_socket_handler.h"
+#include "lib/server_socket_handler/server_socket_handler.h"
 
 // Roomba library
-#include "lib/roomba_core.h"
+#include "lib/roi_handler/roomba_core.h"
 
 //-----------------------------
 
