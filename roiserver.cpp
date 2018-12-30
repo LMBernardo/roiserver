@@ -14,7 +14,7 @@
 //--------------------------
 
 // Uncomment to skip GPIO stuff (for runtime testing on non-rpi devices)
-//#define _ROISERVER_TEST_MODE_
+// #define _ROISERVER_TEST_MODE_
 
 //-----------------------------
 #include <cstdlib>
