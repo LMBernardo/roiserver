@@ -1,0 +1,6 @@
+[submodule "lib/server_socket_handler"]
+	path = lib/server_socket_handler
+	url = git@github.com:LMBernardo/server_socket_handler.git
+[submodule "lib/roi_handler"]
+	path = lib/roi_handler
+	url = git@github.com:LMBernardo/roi_handler.git
