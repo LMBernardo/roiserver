@@ -16,10 +16,10 @@ add_executable(roiserver
         lib/roi_handler/roi_opcodes.h
         lib/roi_handler/roomba_core.cpp
         lib/roi_handler/roomba_core.h
-        lib/server_socket_handler/server_socket_handler.cpp
-        lib/server_socket_handler/server_socket_handler.h
-        lib/server_socket_handler/utilities.cpp
-        lib/server_socket_handler/utilities.h
+        lib/rsocket/server_socket.cpp
+        lib/rsocket/server_socket.h
+        lib/rsocket/utilities.cpp
+        lib/rsocket/utilities.h
         roiserver.cpp)
 
 target_link_libraries(roiserver wiringPi)
