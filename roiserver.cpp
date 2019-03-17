@@ -33,7 +33,7 @@
 #endif
 
 // Socket library
-#include "lib/server_socket_handler/server_socket_handler.h"
+#include "lib/rsocket/server_socket.h"
 
 // Roomba library
 #include "lib/roi_handler/roomba_core.h"
@@ -161,7 +161,7 @@ int main( int argc, char* argv[] ){
         init_gpio();
 
         // Create default socket handler
-        server_socket_handler s_socket;
+        server_socket s_socket;
 
         // Create roomba_core
         roomba_core s_roomba;
